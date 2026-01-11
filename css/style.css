@@ -249,14 +249,14 @@ header .container {
 }
 
 .logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
     transition: var(--transition-smooth);
 }
 
 @media (max-width: 640px) {
     .logo img {
-        height: 20px;
+        height: 32px;
         /* Smaller on mobile */
     }
 }
@@ -802,12 +802,14 @@ header .container {
 }
 
 .cta-box .btn-secondary {
-    border-color: rgba(255, 255, 255, 0.4);
-    color: white;
+    background: white;
+    border-color: white;
+    color: var(--brand-blue);
 }
 
 .cta-box .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: white;
     border-color: white;
 }
 
@@ -834,14 +836,14 @@ header .container {
 }
 
 .footer-logo img {
-    height: 40px;
+    height: 60px;
     width: auto;
     transition: var(--transition-smooth);
 }
 
 @media (max-width: 640px) {
     .footer-logo img {
-        height: 20px !important;
+        height: 32px !important;
         /* Consistent with header logo */
         max-width: 100%;
         /* Prevent overflow */
@@ -913,5 +915,49 @@ body.js-active .animate-on-scroll.visible {
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+    background: #20BA5A;
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
+@media (max-width: 640px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
     }
 }
