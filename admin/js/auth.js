@@ -26,14 +26,14 @@ async function initAuth() {
         if (isLoginPage) {
             if (session) {
                 // Usuário já logado, redirecionar para admin
-                window.location.replace('index.html');
+                window.location.replace('/admin/');
             } else {
                 setupLoginForm();
             }
         } else {
             if (!session) {
                 // Não logado, redirecionar para login
-                window.location.replace('login.html');
+                window.location.replace('/admin/login.html');
             }
         }
 
